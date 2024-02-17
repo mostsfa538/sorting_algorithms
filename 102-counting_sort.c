@@ -14,16 +14,15 @@
 
 void counting_sort(int *array, size_t size)
 {
-    size_t i;
-    size_t max = 0;
-    int *count;
-    int *answer;
+    size_t i, max = 0;
+    int *count, *answer;
 
     if (size < 2)
         return;
 
     max = array[0];
-    for (i = 1; i < size; i++) {
+    for (i = 1; i < size; i++)
+    {
         if (max < (size_t)array[i])
             max = array[i];
     }
@@ -48,13 +47,10 @@ void counting_sort(int *array, size_t size)
         free(count);
         return;
     }
-
     for (i = size; i > 0; i--)
         answer[--count[array[i - 1]]] = array[i - 1];
-
     for (i = 0; i < size; i++)
         array[i] = answer[i];
-
     free(count);
     free(answer);
 }
