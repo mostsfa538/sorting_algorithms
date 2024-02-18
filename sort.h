@@ -2,6 +2,7 @@
 #define SORT
 
 
+#include <cstddef>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -38,7 +39,7 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 
 void heap_sort(int *array, size_t size);
-void sift_down(int *array, size_t start, size_t end);
-void quick_sort_hoare(int *array, size_t size);
+void buildHeap(int *array, size_t size);
+void heapify(int *array, size_t size, size_t i);
 
 #endif
