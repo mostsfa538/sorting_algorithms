@@ -41,4 +41,6 @@ void heap_sort(int *array, size_t size);
 void buildHeap(int *array, size_t size);
 void heapify(int *array, size_t size, size_t i);
 
+void radix_sort(int *array, size_t size);
+void count_sort(int *array, size_t size, size_t pos);
 #endif
